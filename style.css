@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --white-clr: rgba(255, 255, 255);
+    --black-clr: rgba(0, 0, 0);
+    --inconsolata-font: 'Inconsolata', monospace;
+    --space-mono-font-400-700: 'Space Mono', monospace;
+    --montserrat-font-500-700: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.not-found-404 {
+    text-transform: uppercase;
+    font-family: var(--inconsolata-font);
+}
+
+.content { display: flex; }
+
+.img-container img {
+    height: auto;
+    display: block;
+}
+
+.title, .description { font-family: var(--space-mono-font-400-700); }
+
+.homepage-btn {
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: var(--space-mono-font-400-700);
+    color: var(--white-clr);
+    background-color: #333333;
+}
+
+.attribution,
+.attribution a {
+    color: #BDBDBD;
+}
+
+.attribution {
+    text-align: center;
+    font-family: var(--montserrat-font-500-700); 
+}
+
+.attribution > .username { font-weight: 700; }
+.attribution a { text-decoration: none; }
+
+@media (max-width: 768px) {
+    header { padding: 4vw 5vw; }
+
+    .not-found-404 { font-size: 3.125vw; }
+    
+    .content { flex-direction: column; }
+    
+    .img-container { padding: 15vw; }
+    .details { padding: 5vw 10vw; }
+
+    .img-container img { width: 100%; }
+
+    .title { font-size: 8.333vw; margin-right: 15vw; }
+    .description { font-size: 3.125vw; margin: 6vw 16vw 0 0; }
+
+    .homepage-btn { 
+        padding: 3vw 5vw;
+        margin-top: 10vw;
+        font-size: 1.823vw; 
+    }
+
+    .attribution { font-size: 1.823vw; }
+}
+
+@media (min-width: 768.5px) {
+    header { padding: 2vw 5vw; }
+    
+    .not-found-404 { font-size: 1.563vw; }
+
+    .img-container, .details { max-width: 50%; }
+
+    .img-container,
+    .details { padding: 10vw 5vw;}
+
+    .img-container img { width: 100%; }
+
+    .title { font-size: 4.167vw; }
+    .description { font-size: 1.563vw; margin: 3vw 14vw 0 0; }
+
+    .homepage-btn {
+        padding: 1.5vw 2.5vw;
+        margin-top: 5vw;
+        font-size: 0.911vw;
+    }
+
+    .attribution { font-size: 0.911vw; }
+}
